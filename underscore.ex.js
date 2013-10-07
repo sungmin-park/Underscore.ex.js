@@ -8,15 +8,6 @@
     }
   };
 
-  _.unflatten = function(array, length) {
-    var i, _i, _ref, _results;
-    _results = [];
-    for (i = _i = 0, _ref = Math.ceil(array.length / length); 0 <= _ref ? _i < _ref : _i > _ref; i = 0 <= _ref ? ++_i : --_i) {
-      _results.push(array.slice(i * length, (i + 1) * length));
-    }
-    return _results;
-  };
-
   _.float = function(number, default_) {
     number = parseFloat(number);
     if ((default_ != null) && _.isNaN(number)) {
@@ -31,6 +22,21 @@
       number = default_;
     }
     return number;
+  };
+
+  _.reversed = function(array) {
+    array = array.slice(0);
+    array.reverse();
+    return array;
+  };
+
+  _.unflatten = function(array, length) {
+    var i, _i, _ref, _results;
+    _results = [];
+    for (i = _i = 0, _ref = Math.ceil(array.length / length); 0 <= _ref ? _i < _ref : _i > _ref; i = 0 <= _ref ? ++_i : --_i) {
+      _results.push(array.slice(i * length, (i + 1) * length));
+    }
+    return _results;
   };
 
 }).call(this);
