@@ -25,3 +25,7 @@ _.reversed = (array) ->
 _.unflatten = (array, length) ->
   for i in [0...Math.ceil array.length / length]
     array[i * length...(i + 1) * length]
+
+
+_.isOdd = (number) ->
+  number % 2 == 1

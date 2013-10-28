@@ -39,4 +39,8 @@
     return _results;
   };
 
+  _.isOdd = function(number) {
+    return number % 2 === 1;
+  };
+
 }).call(this);
